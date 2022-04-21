@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <a class="anchor" id="top_of_document">
+# <a class="anchor" id="top_of_document"></a>
 # 
 # 
-# # Project Description</a>
+# # Project Description
 
 # __Project Overview__
 # - Interconnect provides landline communication, internet, and several complimentary services. 
@@ -40,9 +40,9 @@
 # 
 # Report prepared March 2022
 
-# <a class="anchor" id="load_inspect">
+# <a class="anchor" id="load_inspect"></a>
 # 
-# # Data Preprocessing & Exploration</a>
+# # Data Preprocessing & Exploration
 # 
 # ## Import libraries
 
@@ -210,9 +210,9 @@ phone['MultipleLines'].value_counts()
 # - We created a column to indicate 'phone_customer' so the information is retained when we merge files. After merging, we will fillin the missing values with no and consider OHE.
 # - Consider OHE for these features ('MultipleLines').
 
-# <a class="anchor" id="data_preprocessing">
+# <a class="anchor" id="data_preprocessing"></a>
 # 
-# ## Preprocessing Tasks</a>
+# ## Preprocessing Tasks
 # 
 # - Merge four files on shared customerID and then drop customerID column.
 # - Change column names to all lower case for uniformity.
@@ -399,9 +399,9 @@ print('\n# missing')
 print(df.isnull().sum())
 
 
-# <a class="anchor" id="exploratory_data_analysis">
+# <a class="anchor" id="exploratory_data_analysis"></a>
 # 
-# ## Exploratory Data Analysis</a>
+# ## Exploratory Data Analysis
 
 # __Check the distribution of the values within various columns__
 
@@ -692,9 +692,9 @@ sns.distplot(df_both.monthly_charges, kde=True).set(
 # - While it is not a big surprise, those customers with both services spend more per month than those without either.
 # 
 
-# <a class="anchor" id="modeling_plan">
+# <a class="anchor" id="modeling_plan"></a>
 # 
-# # Modeling plan</a>
+# # Modeling plan
 # 
 # "A rough plan for solving the task, specifying 3-5 basic steps and explaining each step in one or two sentences"
 # 
@@ -704,9 +704,9 @@ sns.distplot(df_both.monthly_charges, kde=True).set(
 # 4. We will use various methods such as class_weight='balanced', downsampling, and upsampling to adjust for the imbalanced target data.
 # 5. We will use a dummy classifier to compare our final results, i.e. the sanity check.
 
-# <a class="anchor" id="function_for_scores">
+# <a class="anchor" id="function_for_scores"></a>
 # 
-# ## Create a function to calculate and print the scores for the models</a>
+# ## Create a function to calculate and print the scores for the models
 
 # In[56]:
 
@@ -805,9 +805,9 @@ def evaluate_model(model, train_features, train_target, test_features, test_targ
     return 
 
 
-# <a class="anchor" id="split_data">
+# <a class="anchor" id="split_data"></a>
 # 
-# ## Split the data into train, valid, and test sets</a>
+# ## Split the data into train, valid, and test sets
 
 # In[57]:
 
@@ -833,9 +833,9 @@ print('Test target and features and percentage\n', y_test.shape, X_test.shape,
       'pct', (len(y_test)/len(df)))
 
 
-# <a class="anchor" id="explore_balance">
+# <a class="anchor" id="explore_balance"></a>
 # 
-# ## Explore the balance of classes in the target</a>
+# ## Explore the balance of classes in the target
 
 # In[59]:
 
@@ -855,9 +855,9 @@ print('\n% ohe Test Target balance of retained to lost customers  \n', test_ohe_
 # - Our sample is imbalanced, about 73% of our target column indicates retained, so if we use this unbalanced data for our models our accuracy will be skewed towards retained and won't accurately predict the customers likely to leave. 
 # - We will need to take steps to address the unbalanced distribution model that will predict 0 in every instance because of the unbalanced data.
 
-# <a class="anchor" id="model_building">
+# <a class="anchor" id="model_building"></a>
 # 
-# ## Model Building</a>
+# ## Model Building
 
 # __Dummy Classifier__
 # - Baseline 'Sanity Check' Model.
@@ -1017,9 +1017,9 @@ xgb_eval = evaluate_model(xgb, X_train, y_train, X_valid, y_valid)
 final_result = evaluate_model(cb, X_train, y_train, X_test, y_test)
 
 
-# <a class="anchor" id="conclusions">
+# <a class="anchor" id="conclusions"></a>
 # 
-# ## Overview and conclusions</a>
+# ## Overview and conclusions
 # 
 # Steps:
 # 1. [Load and inspect the data](#load_inspect): load, inspect, and create a basic plan.
