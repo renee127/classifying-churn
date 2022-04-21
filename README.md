@@ -49,6 +49,7 @@ You will also need to have software installed to run and execute an iPython Note
 Authors
 
 Renee Raven
+
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details
