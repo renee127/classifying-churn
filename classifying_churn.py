@@ -6,6 +6,8 @@
 # 
 # # Project Description
 
+# This data analysis project uses machine learning and data balancing techniques to create a predictive model higher than the target AUC-ROC (0.93 versus goal of > 0.88).
+# 
 # __Project Overview__
 # - Interconnect provides landline communication, internet, and several complimentary services. 
 # - Clients select a monthly payment or yearly contracts.
